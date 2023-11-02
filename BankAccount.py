@@ -45,3 +45,29 @@ class BankAccount:
         print(f"{self.full_name}")
         print(f"Account No.: ****{self.account_number[-4:]}")
         print(f"Balance: ${self.balance:.2f}\n")
+
+#create three new bank account instances
+account1 = BankAccount("Mitchell")
+#assign custom bank account number
+account1.account_number = "03141592"
+
+account2 = BankAccount("Allen")
+account3 = BankAccount("Jeff")
+
+# deposit $400,000 into Mitchell's account
+account1.deposit(400000)
+
+#print account statment for Mitchell
+account1.print_statement()
+
+#add interest to the account
+account1.add_interest()
+
+#print a statment with the added interest
+account1.print_statement()
+
+#withdraw $150 for Mitchell to buy some Yeezy's
+account1.withdraw(150)
+
+#print a final statement
+account1.print_statement()
